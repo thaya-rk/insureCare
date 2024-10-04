@@ -1,0 +1,41 @@
+/* client/src/components/Navbar.css */
+
+.navbar {
+    background-color: #4caf50; /* Green background */
+    width: 100vw; /* Full viewport width */
+    position: fixed; /* Fixed position to stay at the top */
+    top: 0; /* Position at the top */
+    left: 0; /* Align to the left */
+    z-index: 1000; /* Ensure it stays above other content */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Optional shadow for depth */
+}
+
+.navbar-container {
+    display: flex;
+    justify-content: space-between; /* Space between logo and links */
+    align-items: center; /* Center items vertically */
+    margin: auto; /* Center the navbar */
+    padding: 10px 20px; /* Padding around the navbar */
+}
+
+.navbar-logo {
+    color: white; /* Logo text color */
+    font-size: 1.5rem; /* Logo text size */
+    text-decoration: none; /* Remove underline */
+}
+
+.navbar-links {
+    list-style: none; /* Remove bullets from the list */
+    display: flex; /* Flex for horizontal layout */
+    gap: 20px; /* Space between links */
+}
+
+.navbar-links a {
+    color: white; /* Link text color */
+    text-decoration: none; /* Remove underline */
+    transition: color 0.3s; /* Smooth color transition */
+}
+
+.navbar-links a:hover {
+    text-decoration: underline; /* Underline on hover */
+}

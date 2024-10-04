@@ -1,42 +1,62 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+/* client/src/App.css */
+
+* {
+  box-sizing: border-box; /* Ensure padding and borders are included in element's total width and height */
+  margin: 0; /* Remove default margin */
+  padding: 0; /* Remove default padding */
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+body {
+  font-family: 'Arial', sans-serif; /* Set a default font */
+  background-color: #ffffff; /* White background for the entire app */
+  color: #333; /* Default text color */
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
+/* Container for the entire app */
+.app-container {
+  display: flex;
+  flex-direction: column; /* Stack elements vertically */
+  min-height: 100vh; /* Full height of the viewport */
+}
+
+/* Navbar styles */
+.navbar {
+  background-color: #4caf50; /* Green background for navbar */
+  padding: 15px; /* Padding for navbar */
+  color: white; /* Text color for navbar */
+}
+
+.navbar-container {
+  display: flex; /* Use flexbox for navbar layout */
+  justify-content: space-between; /* Space between items */
+  align-items: center; /* Center items vertically */
+  max-width: 1200px; /* Max width for the navbar */
+  margin: auto; /* Center the navbar */
+}
+
+/* Main content styles */
+.main-content {
+  flex: 1; /* Allow content to grow and fill available space */
+  padding: 20px; /* Padding for main content */
+  background-color: #f4f4f4; /* Light gray background for main content area */
+}
+
+/* Footer styles */
+.footer {
+  background-color: #4caf50; /* Green background for footer */
+  color: white; /* White text color */
+  text-align: center; /* Center text in footer */
+  padding: 10px 0; /* Padding for footer */
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .navbar-container {
+      flex-direction: column; /* Stack navbar items on smaller screens */
+      align-items: flex-start; /* Align items to the start */
   }
-  to {
-    transform: rotate(360deg);
+
+  .main-content {
+      padding: 10px; /* Adjust padding for main content on smaller screens */
   }
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
-}
-
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
 }
